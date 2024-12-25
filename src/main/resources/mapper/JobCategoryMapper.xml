@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luotao.job.mapper.JobCategoryMapper">
+    <select id="allJobCategory" resultType="com.luotao.job.domain.JobCategory">
+        select * from `job_category`
+    </select>
+
+    <insert id="insertJobCategory" parameterType="com.luotao.job.domain.JobCategory"> useGeneratedKeys="true" keyProperty="1">
+        insert into `job_category`(category_name,category_desc) values (#{1},#{2})
+    </insert>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from `job_category` where id=#{1}
+    </delete>
+
+    <update id="updateByPrimaryKey" parameterType="com.luotao.job.domain.JobCategory"> useGeneratedKeys="true" keyProperty="1">
+        update `job_cateory` set category_name=#{1},category_desc=#{2} where id=#{1}
+    </update>
+
+</mapper>
