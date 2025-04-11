@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MyBatis配置文件约束声明 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射器定义：将XML映射到EmpMapper接口，实现接口方法与SQL的绑定 -->
+<mapper namespace="com.luotao.mapper.EmpMapper">
+
+    <!-- 查询所有员工信息
+         id: 对应Mapper接口方法名
+         resultType: 返回结果映射的实体类 -->
+    <select id="list" resultType="com.luotao.domian.Employ">
+        <!-- SQL查询字段与实体类属性映射
+             通过as别名实现数据库字段到Java属性的映射,解决字段名与属性名不一致的问题-->
+        select
+        emp_id as 'empId',   <!-- 员工ID映射 -->
+        emp_name as 'empName',  <!-- 员工姓名映射 -->
+        emp_salary as 'empSalary'  <!-- 员工薪资映射 -->
+        from t_emp  <!-- 数据来源表 -->
+    </select>
+</mapper>
