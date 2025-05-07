@@ -1,0 +1,6 @@
+[submodule "job-web"]
+	path = job-web
+	url = https://github.com/luotaofun/job-web.git
+[submodule "my-javapp"]
+	path = my-javapp
+	url = https://github.com/luotaofun/my-javapp.git

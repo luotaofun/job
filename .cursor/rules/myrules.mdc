@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# job-web文件夹是基于vue3的前端项目
+
+# my-javapp文件夹是基于spring的后端项目
